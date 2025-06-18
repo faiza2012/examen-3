@@ -1,9 +1,12 @@
-// ✅ Bon
+
 import './src/assets/style.css';
 
 import { greet } from './src/utils.js';
 
-console.log(greet('Faiza'));
+const message = greet("Faiza");
+console.log(message);
+
+
 
 function loadPage(page) {
   fetch(`/src/pages/${page}.html`)
@@ -32,3 +35,7 @@ document.querySelectorAll("nav a").forEach(link => {
 });
 
 loadPage("home");
+const greeting = greet("Faiza");
+const greetingElement = document.createElement("p");
+greetingElement.textContent = greeting;
+document.body.appendChild(greetingElement);
